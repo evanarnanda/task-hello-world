@@ -1,0 +1,19 @@
+[project]
+name = "task1-hello-world"
+version = "0.1.0"
+description = "First python project on onxp"
+authors = [
+    {name = "Muhammad Evan Arnanda", email = "evanarnanda@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
