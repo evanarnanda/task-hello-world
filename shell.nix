@@ -8,12 +8,20 @@ let
         };
         overlays = [];
     };
+    git = pkgs.git.overrideAttrs(oldAttrs: rec {
+        version = "2.42.0";
+    });
+
+    podman = pkgs.podman.overrideAttrs(oldAttrs: rec {
+        version = "4.7.2";
+    });
 in
 
 pkgs.mkShell
 {
     nativeBuildInputs = with pkgs; [
         pkgs.git
+        pkgs.podman
         python312
         python312Packages.pip
         pkgs.pdm
